@@ -8,7 +8,7 @@ Intended for exploratory/academic purposes only. Insecure and to be run locally 
 # to run
 
 ```
-docker build -t zie0/jupyter-rust
+docker build -t zie0/jupyter-rust .
 docker run -it -d --rm -p 8888:8888 -v /local/path/to/notebooks/:/root zie0/jupyter-rust
 docker exec -d <CONTAINER ID> jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
