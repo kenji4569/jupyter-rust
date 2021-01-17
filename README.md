@@ -9,7 +9,7 @@ Intended for exploratory/academic purposes only. Insecure and to be run locally 
 
 ```
 docker build -t zie0/jupyter-rust .
-docker run -it -d --rm -p 8888:8888 -v /local/path/to/notebooks/:/root zie0/jupyter-rust
+docker run -d --rm -p 8888:8888 -v /local/path/to/notebooks/:/root zie0/jupyter-rust
 ```
 
 It's recommended you run `docker exec` here without the `-d` so that you can see the access token in the terminal
