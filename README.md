@@ -15,4 +15,7 @@ docker exec -d <CONTAINER ID> jupyter notebook --ip=0.0.0.0 --port=8888 --allow-
 
 open browser -> localhost:8888
 in juptyer UI, kernel > Change Kernel > Rust
+
+![](jupyter-rust_helloWorld.gif)
+
 enjoy tinkering!
