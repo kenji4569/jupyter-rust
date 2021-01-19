@@ -5,7 +5,29 @@ a prototype docker container for jupyter notebooks for rust. Inspired by: https:
 
 A docker image of the jupyter notebooks for rust! The implementation is a bit of a hack to adapt existing install processes to this format. It is portable enough and gets the job done.
 
-# Container Details
+# To Run
+
+```
+git clone https://github.com/Zie0/jupyter-rust.git
+docker build -t zie0/jupyter-rust .
+```
+
+Then change to the local directory you would like to store your notebooks.
+NOTE: the `JUPYTER_TOKEN` below is an example, it's recommended that it is changed.
+```
+export JUPYTER_TOKEN='super-secret-example-password'
+docker run -it -d --rm -p 8888:8888 -v ${PWD}:/opt/notebooks -e JUPYTER_TOKEN zie0/jupyter-rust
+```
+
+open browser -> localhost:8888?token=super-secret-example-password
+
+in juptyer UI, kernel > Change Kernel > Rust
+
+![](jupyter-rust_helloWorld.gif)
+
+enjoy tinkering!
+
+# Image Details
 
 It's working with the latest rust container running 
 * base docker image -> rust:1.49
@@ -28,25 +50,3 @@ ipywidgets       : not installed
 nbformat         : 5.1.2
 traitlets        : 5.0.5
 ```
-
-# To Run
-
-```
-git clone https://github.com/Zie0/jupyter-rust.git
-docker build -t zie0/jupyter-rust .
-```
-
-Then change to the local directory you would like to store your notebooks.
-NOTE: the `JUPYTER_TOKEN` below is an example, it's recommended that it is changed.
-```
-export JUPYTER_TOKEN='super-secret-example-password'
-docker run -it -d --rm -p 8888:8888 -v ${PWD}:/opt/notebooks -e JUPYTER_TOKEN zie0/jupyter-rust
-```
-
-open browser -> localhost:8888?token=super-secret-example-password
-
-in juptyer UI, kernel > Change Kernel > Rust
-
-![](jupyter-rust_helloWorld.gif)
-
-enjoy tinkering!
