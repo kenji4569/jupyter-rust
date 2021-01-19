@@ -1,4 +1,4 @@
-FROM rust
+FROM rust:1.49
 
 # System packages 
 RUN apt-get update && apt-get install -y curl cmake

@@ -1,18 +1,33 @@
 # jupyter-rust
-a prototype docker container for jupyter notebooks for rust. Instpired by: https://www.reddit.com/r/rust/comments/ktor8j/beautiful_chord_diagrams_with_rust/
+a prototype docker container for jupyter notebooks for rust. Inspired by: https://www.reddit.com/r/rust/comments/ktor8j/beautiful_chord_diagrams_with_rust/
 
 # Summary
 
-A docker image of the jupyter notebooks for rust! I'm new to rust and newer to docker, and I thought it may help to have the jupyter-rust dev env in a docker container. The docker image only has jupyter notebooks for now
+A docker image of the jupyter notebooks for rust! The implementation is a bit of a hack to adapt existing install processes to this format. It is portable enough and gets the job done.
 
-There's plenty that can be simplified/cleaned up in the dockerfile. The regular process for getting rust and jupyter playing nice didn't work the same way but I managed to work around it. 
+# Container Details
 
-Right now it's working with the latest rust container running 
-* RUST_VERSION=1.49.0 with 
-* conda 4.9.2 and 
-* evcxr_jupyter = "0.8.0".
+It's working with the latest rust container running 
+* base docker image -> rust:1.49
+* conda version -> 4.9.2 
+* jupyter version -> 4.7.0
+* evcxr_jupyter = "0.8.0"
 
-PRs welcome!
+## Jupyter Version Details
+```
+# jupyter --version
+jupyter core     : 4.7.0
+jupyter-notebook : 6.2.0
+qtconsole        : not installed
+ipython          : 7.12.0
+ipykernel        : 5.4.2
+jupyter client   : 6.1.11
+jupyter lab      : not installed
+nbconvert        : 6.0.7
+ipywidgets       : not installed
+nbformat         : 5.1.2
+traitlets        : 5.0.5
+```
 
 # To Run
 
