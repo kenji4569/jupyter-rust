@@ -24,3 +24,5 @@ SHELL ["/bin/bash", "--login", "-c"]
 
 RUN conda install -y -c conda-forge nb_conda_kernels notebook
 RUN cp -r ./root/.local/share/jupyter/kernels/rust/ ./miniconda/share/jupyter/kernels
+
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
