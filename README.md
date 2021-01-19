@@ -14,19 +14,22 @@ Right now it's working with the latest rust container running
 
 PRs welcome!
 
-# to run
+# To Run
 
 ```
+git clone https://github.com/Zie0/jupyter-rust.git
 docker build -t zie0/jupyter-rust .
-docker run -it -d --rm -p 8888:8888 -v ${PWD}:/root zie0/jupyter-rust
 ```
 
-It's recommended you run `docker exec` here without the `-d` so that you can see the access token in the terminal
+Then change to the local directory you would like to store your notebooks.
+NOTE: the `JUPYTER_TOKEN` below is an example, it's recommended that it is changed.
 ```
-docker exec <CONTAINER ID> jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+export JUPYTER_TOKEN='super-secret-example-password'
+docker run -it -d --rm -p 8888:8888 -v ${PWD}:/opt/notebooks -e JUPYTER_TOKEN zie0/jupyter-rust
 ```
 
-open browser -> localhost:8888
+open browser -> localhost:8888?token=super-secret-example-password
+
 in juptyer UI, kernel > Change Kernel > Rust
 
 ![](jupyter-rust_helloWorld.gif)
