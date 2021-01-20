@@ -21,7 +21,7 @@ docker run -it -d --rm -p 8888:8888 -v ${PWD}:/opt/notebooks -e JUPYTER_TOKEN zi
 
 open browser -> localhost:8888?token=super-secret-example-password
 
-in juptyer UI, kernel > Change Kernel > Rust
+in jupyter notebook UI, kernel > Change Kernel > Rust
 
 ![](jupyter-rust_helloWorld.gif)
 

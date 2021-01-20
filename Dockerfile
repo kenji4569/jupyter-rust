@@ -11,16 +11,12 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 # configure & update conda
 ENV PATH=/miniconda/bin:${PATH} \
     SHELL=/bin/bash
-RUN /bin/bash -c "source ~/.bashrc" && \
-    conda init bash && \
+RUN conda init bash && \
     conda update -y conda && \
     conda install -y -c conda-forge nb_conda_kernels notebook
 
 # install evcxr_jupyter
 RUN cargo install evcxr_jupyter && \    
     evcxr_jupyter --install
-
-# hack
-RUN cp -r ./root/.local/share/jupyter/kernels/rust/ ./miniconda/share/jupyter/kernels
 
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--notebook-dir=/opt/notebooks", "--allow-root", "--no-browser"]
