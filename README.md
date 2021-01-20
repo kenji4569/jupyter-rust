@@ -3,9 +3,7 @@ a prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr
 
 # Summary
 
-A docker image of the jupyter notebooks for rust! The implementation is a bit of a hack to adapt existing install processes to this format. It is portable enough and gets the job done.
-
-# To Run
+A docker image of the jupyter notebooks for rust!
 
 ```
 git clone https://github.com/Zie0/jupyter-rust.git
