@@ -1,5 +1,5 @@
 # jupyter-rust
-a prototype docker container for jupyter notebooks for rust. Inspired by: https://www.reddit.com/r/rust/comments/ktor8j/beautiful_chord_diagrams_with_rust/
+a prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
 
 # Summary
 
