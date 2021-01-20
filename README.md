@@ -1,9 +1,7 @@
-# jupyter-rust
-a prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
+# jupyter-rust Summary
+A prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
 
-# Summary
-
-A docker image of the jupyter notebooks for rust!
+# Usage
 
 ```
 git clone https://github.com/Zie0/jupyter-rust.git
@@ -23,11 +21,9 @@ in jupyter notebook UI, kernel > Change Kernel > Rust
 
 ![](jupyter-rust_helloWorld.gif)
 
-enjoy tinkering!
-
 # Image Details
 
-It's working with the latest rust container running 
+Image components' versions:
 * base docker image -> rust:1.49
 * conda version -> 4.9.2 
 * jupyter version -> 4.7.0
