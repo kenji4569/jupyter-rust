@@ -1,11 +1,7 @@
-# jupyter-rust
-a prototype docker container for jupyter notebooks for rust. Inspired by: https://www.reddit.com/r/rust/comments/ktor8j/beautiful_chord_diagrams_with_rust/
+# jupyter-rust Summary
+A prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
 
-# Summary
-
-A docker image of the jupyter notebooks for rust! The implementation is a bit of a hack to adapt existing install processes to this format. It is portable enough and gets the job done.
-
-# To Run
+# Usage
 1. clone the repo
 
 from within the local repo workspace
@@ -16,13 +12,11 @@ from within the local repo workspace
 to change kernel
 kernel > Change Kernel > (Rust|python3)
 
-![](jupyter-rust_helloWorld.gif)
-
-enjoy tinkering!
+![](.jupyter-rust_helloWorld.gif)
 
 # Image Details
 
-It's working with the latest rust container running 
+Image components' versions:
 * base docker image -> rust:1.49
 * conda version -> 4.9.2 
 * jupyter version -> 4.7.0
