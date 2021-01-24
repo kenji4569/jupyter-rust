@@ -1,7 +1,7 @@
 # jupyter-rust Summary
-A prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
+A prototype docker container for jupyter lab with rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md) and [Data Analytics with Rust Notebooks](https://datacrayon.com/)
 
-Notebooks will be saved in `notebooks` directory after docker container is stopped.
+Work produced in the jupyter lab is saved in the `notebooks` directory. It persists after docker container is stopped.
 
 # Usage
 1. clone the repo
