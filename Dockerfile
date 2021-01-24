@@ -14,10 +14,7 @@ ENV PATH=/miniconda/bin:${PATH} \
 RUN conda init bash && \
     conda update -y conda && \
     conda install -c anaconda cmake -y && \
-    conda install -y -c conda-forge nb_conda_kernels jupyterlab=2.2.9 nodejs=15 
-
-# add jupyter labextenstions
-RUN jupyter labextension install jupyterlab-plotly
+    conda install -y -c conda-forge nb_conda_kernels jupyterlab=2.2.9 
 
 # install evcxr_jupyter
 RUN cargo install evcxr_jupyter && \    
