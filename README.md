@@ -1,10 +1,11 @@
 # jupyter-rust Summary
 A prototype docker container for jupyter notebooks for rust. Inspired by: [evcxr_jupyter](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md)
 
+Notebooks will be saved in `notebooks` directory after docker container is stopped.
+
 # Usage
 1. clone the repo
 
-from within the local repo workspace
 2. `docker-compose up`
 
 3. open link > new > Rust
