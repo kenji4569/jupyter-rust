@@ -3,7 +3,10 @@ A prototype docker container for jupyter lab with rust. Inspired by: [evcxr_jupy
 
 Work produced in the jupyter lab is saved in the `notebooks` directory. It persists after docker container is stopped.
 
-# Usage
+This can be built on your local machine or you can [follow the instructions here](https://hub.docker.com/repository/docker/zie0/jupyter-rust) to download the image and launch the container in a couple of commands.
+
+# To Build
+
 1. clone the repo
 
 2. `docker-compose up`
