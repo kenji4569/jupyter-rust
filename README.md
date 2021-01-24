@@ -33,9 +33,9 @@ jupyter core     : 4.7.0
 jupyter-notebook : 6.2.0
 qtconsole        : not installed
 ipython          : 7.12.0
-ipykernel        : 5.4.2
+ipykernel        : 5.4.3
 jupyter client   : 6.1.11
-jupyter lab      : not installed
+jupyter lab      : 2.2.9
 nbconvert        : 6.0.7
 ipywidgets       : not installed
 nbformat         : 5.1.2
