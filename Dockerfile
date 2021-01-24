@@ -19,4 +19,6 @@ RUN conda init bash && \
 RUN cargo install evcxr_jupyter && \    
     evcxr_jupyter --install
 
+EXPOSE 8888
+
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--notebook-dir=/opt/notebooks", "--allow-root", "--no-browser"]

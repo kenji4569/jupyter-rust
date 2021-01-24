@@ -6,22 +6,15 @@ a prototype docker container for jupyter notebooks for rust. Inspired by: https:
 A docker image of the jupyter notebooks for rust! The implementation is a bit of a hack to adapt existing install processes to this format. It is portable enough and gets the job done.
 
 # To Run
+1. clone the repo
 
-```
-git clone https://github.com/Zie0/jupyter-rust.git
-docker build -t zie0/jupyter-rust .
-```
+from within the local repo workspace
+2. `docker-compose up`
 
-Then change to the local directory you would like to store your notebooks.
-NOTE: the `JUPYTER_TOKEN` below is an example, it's recommended that it is changed.
-```
-export JUPYTER_TOKEN='super-secret-example-password'
-docker run -it -d --rm -p 8888:8888 -v ${PWD}:/opt/notebooks -e JUPYTER_TOKEN zie0/jupyter-rust
-```
+3. open link > new > Rust
 
-open browser -> localhost:8888?token=super-secret-example-password
-
-in jupyter notebook UI, kernel > Change Kernel > Rust
+to change kernel
+kernel > Change Kernel > (Rust|python3)
 
 ![](jupyter-rust_helloWorld.gif)
 
