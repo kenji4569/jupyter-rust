@@ -1,6 +1,6 @@
-FROM rust:1.49
+FROM rust:latest
 
-# System packages 
+# System packages
 RUN apt-get update && apt-get install -y curl
 
 # Install miniconda to /miniconda
@@ -14,10 +14,10 @@ ENV PATH=/miniconda/bin:${PATH} \
 RUN conda init bash && \
     conda update -y conda && \
     conda install -c anaconda cmake -y && \
-    conda install -y -c conda-forge nb_conda_kernels jupyterlab=2.2.9 
+    conda install -y -c conda-forge nb_conda_kernels jupyterlab=2.2.9
 
 # install evcxr_jupyter
-RUN cargo install evcxr_jupyter && \    
+RUN cargo install evcxr_jupyter && \
     evcxr_jupyter --install
 
 EXPOSE 8888
